@@ -174,7 +174,7 @@ function Edition() {
                   width={144} 
                   isCustom 
                   text='LIMPAR' />
-               <ToRegister margB={27} />
+               <ToRegister margB={25} />
                <Button
                   margB={5}
                   width={144}
