@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { Input, Button, ToRegister, Container, InputLabelContainer, FloatingLabel, Separator } from '../../components'
 import { FloatingLabelTextArea, FormContainer, GridContainer, TextArea, TextAreaContainer } from "./styles";
@@ -24,6 +25,23 @@ function Edition() {
    function handleEditionInputs(event) {
       const { id, value } = event.target
       setPersonalData({ ...personalData, [id]: value })
+   }
+
+   async function getAddress() {
+      try{
+         const { data } = await axios.get(`https://brasilapi.com.br/api/cep/v1/${personalData.zipCode}`)
+         console.log(data)
+         const { city, state, neighborhood, street} = data
+         setPersonalData({
+            ...personalData,
+            publicPlace: street,
+            neighborhood,
+            city,
+            federalUnity: state
+         })
+      }catch(error){
+         console.log(error)
+      }
    }
 
    function handleClear() {
@@ -76,6 +94,7 @@ function Edition() {
                      onChange={handleEditionInputs}
                      id='zipCode'
                      placeholder='CEP'
+                     onBlur={()=> getAddress()}
                      value={personalData.zipCode}
                   />
                   <FloatingLabel msg={'CEP'} width={41}/>

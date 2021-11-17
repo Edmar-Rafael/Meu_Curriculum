@@ -45,6 +45,15 @@ export const HomeFormContainer = styled.form`
    }  
 `
 
+export const MaskButton = styled.button`
+   width: 22px;
+   height: 22px;
+   border: none;
+   transform: translate3d(-22px, -40px, 0);
+   background-color: ${Colors.background.secondary};
+   cursor: pointer;
+`
+
 export const ScreenRow = styled.div`
    display: flex;
    flex-direction: column;

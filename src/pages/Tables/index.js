@@ -34,11 +34,7 @@ function Tables() {
                <OptionsContainer>OPÇÔES</OptionsContainer>
                <UserNameContainer>{EMAIL}</UserNameContainer>
                <ButtonContainer>
-                  <Button 
-                     onClick={handleEdit}
-                     text='EDITAR'
-                     width={90}
-                  />
+                  <Button  text='EDITAR' width={90} />
                   <Separator/>
                   <Button pdf>
                      <Img src={pdfIcon} />
@@ -50,7 +46,7 @@ function Tables() {
          </TablesContainer>
          <PlusContainer>
             <PlusButtonContainer>
-               <Button width={35} bordrad={99}>
+               <Button onClick={handleEdit} width={35} bordrad={99}>
                   <FontAwesomeIcon icon={faPlus}/>
                </Button>
             </PlusButtonContainer>

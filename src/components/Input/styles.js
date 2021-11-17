@@ -12,7 +12,6 @@ export const InputContainer = styled.input`
    border: ${Colors.border};
    border-radius: 3.5px;
    font-weight: 400;
-   cursor: pointer;
 
    
    &::placeholder{

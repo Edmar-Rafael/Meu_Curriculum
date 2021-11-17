@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const InputLabelBox = styled.div`
    display: flex;
    flex-wrap: wrap;
+   justify-content: space-between;
    width: ${({width}) => width || 70}px;
    max-width: 99%;
 

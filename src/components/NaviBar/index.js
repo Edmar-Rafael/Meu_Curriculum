@@ -1,12 +1,13 @@
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useHistory } from "react-router";
+import { useHistory, useLocation } from "react-router";
 import { Button } from "..";
 import { useAuth } from "../../hooks/useAuth";
 import Logo from "../../icons/Logo";
 import { ButtonContainer, Content, LogoContainer, NaviBarContainer } from "./styles";
 
-function NaviBar({isEdition}) {
+function NaviBar() {
+   const isEdition = useLocation().pathname === '/edition'
    const { logOut } = useAuth()
    const history = useHistory()
 
