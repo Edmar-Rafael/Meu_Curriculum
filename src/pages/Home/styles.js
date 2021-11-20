@@ -46,10 +46,12 @@ export const HomeFormContainer = styled.form`
 `
 
 export const MaskButton = styled.button`
-   width: 22px;
-   height: 22px;
+   display: flex;
+   justify-content: center;
+   width: 19px;
+   height: 15px;
    border: none;
-   transform: translate3d(-22px, -40px, 0);
+   transform: translate3d(-22px, -35px, 0);
    background-color: ${Colors.background.secondary};
    cursor: pointer;
 `
@@ -58,6 +60,7 @@ export const ScreenRow = styled.div`
    display: flex;
    flex-direction: column;
    align-items: center;
+   max-width: 99%;
 
    @media(max-width: 800px) {
       width: 90%;

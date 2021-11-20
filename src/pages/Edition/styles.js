@@ -47,19 +47,18 @@ export const TextArea = styled.textarea`
    background-color: transparent;
    border: ${Colors.border};
    border-radius: 3.5px;
-   cursor: pointer;
 
+
+   &:hover, :focus {
+      border-color: ${Colors.purple.secondary};
+      outline: none;
+   }
 
    &:focus + label, :not(:placeholder-shown) + label {
       font-size: 16px;
       font-weight: 700;
       color: ${Colors.purple.primary};
       transform: translate3d(-6px, -148px, 0) scale(.84);
-   }
-
-   &:hover, :focus {
-      border-color: ${Colors.purple.secondary};
-      outline: none;
    }
 
    &::placeholder {
@@ -72,7 +71,7 @@ export const FloatingLabelTextArea = styled.label`
    color: ${Colors.label};
    font-weight: 100;
    font-family: 'Noto-sans';
-   width: 90px;
+   width: 95px;
    max-width: 99%;
    margin-left: 15px;
    text-align: center;

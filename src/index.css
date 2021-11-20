@@ -5,3 +5,7 @@ body {
    color: white;
    font-family: 'Roboto', sans-serif;
  }
+ 
+ .mask:hover{
+   color: #bb86fc;
+ }

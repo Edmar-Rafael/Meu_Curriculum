@@ -30,10 +30,8 @@ function Edition() {
    async function getAddress() {
       try{
          const { data } = await axios.get(`https://brasilapi.com.br/api/cep/v1/${personalData.zipCode}`)
-         console.log(data)
          const { city, state, neighborhood, street} = data
          setPersonalData({
-            ...personalData,
             publicPlace: street,
             neighborhood,
             city,
@@ -74,7 +72,7 @@ function Edition() {
                      placeholder='Nome Completo'
                      value={personalData.fullName}
                   />
-                  <FloatingLabel msg={'Nome Completo'} width={121}/>
+                  <FloatingLabel msg={'Nome Completo'} width={135}/>
                   <Separator height={21}/>
                </InputLabelContainer>
                <InputLabelContainer width={187}>
@@ -85,7 +83,7 @@ function Edition() {
                      placeholder='Data de nascimento'
                      value={personalData.birthday}
                   />
-                  <FloatingLabel msg={'Data de nascimento'} width={144}/>
+                  <FloatingLabel msg={'Data de nascimento'} width={160}/>
                   <Separator height={21}/>
                </InputLabelContainer>
                <InputLabelContainer width={156}>
@@ -174,7 +172,7 @@ function Edition() {
                      placeholder='Telefone'
                      value={personalData.phone}
                   />
-                  <FloatingLabel msg={'Telefone'} width={70}/>
+                  <FloatingLabel msg={'Telefone'} width={76}/>
                   <Separator height={21}/>
                </InputLabelContainer>
                <TextAreaContainer>
