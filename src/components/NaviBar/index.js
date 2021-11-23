@@ -20,8 +20,7 @@ function NaviBar() {
       <NaviBarContainer>
          <Content>
             <ButtonContainer>
-            {
-               isEdition ?
+            {isEdition &&
                <Button
                text=' VOLTAR'
                onClick={handleTables} 
@@ -30,8 +29,6 @@ function NaviBar() {
                >
                   <FontAwesomeIcon icon={faArrowLeft}/>
                </Button> 
-                  :
-               <div/>
             }               
             </ButtonContainer>            
             <LogoContainer>

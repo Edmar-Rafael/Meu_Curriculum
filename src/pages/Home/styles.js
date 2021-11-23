@@ -48,10 +48,11 @@ export const HomeFormContainer = styled.form`
 export const MaskButton = styled.button`
    display: flex;
    justify-content: center;
-   width: 19px;
-   height: 15px;
+   align-items: center;
+   width: 35px;
+   height: 25px;
    border: none;
-   transform: translate3d(-22px, -35px, 0);
+   transform: translate3d(-22px, -40px, 0);
    background-color: ${Colors.background.secondary};
    cursor: pointer;
 `

@@ -5,7 +5,7 @@ import { EMAIL, JWT, PASSWORD } from '../../config'
 import { useAuth } from '../../hooks/useAuth'
 import Logo from '../../icons/Logo'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEye } from '@fortawesome/free-solid-svg-icons'
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 import { Colors } from '../../resources'
 import { 
    Button, 
@@ -86,7 +86,11 @@ function Home() {
                  <FloatingLabel msg={'Senha'} width={50}/>
                  <Separator height={21}/>
                  <MaskButton type='button' onClick={() => setMaskType(!maskType)}>
-                    <FontAwesomeIcon icon={faEye} color={`${Colors.label}`} className='mask'/>
+                    <FontAwesomeIcon 
+                        size='2x'
+                        icon={maskType ? faEye : faEyeSlash} 
+                        color={`${Colors.label}`} 
+                        className={maskType ? 'mask' : ''}/>
                  </MaskButton>
               </InputLabelContainer>
               <Separator height={11}/>
