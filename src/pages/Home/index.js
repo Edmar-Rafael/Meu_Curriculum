@@ -51,7 +51,6 @@ function Home() {
    function handleChange(event) {
       const {id, value} = event.target
       setUser({...user, [id]: value})
-      console.log(user)
    }
 
 

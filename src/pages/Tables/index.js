@@ -17,13 +17,8 @@ import {
    TablesHeader, 
    UserNameContainer } from './styles'
    
-
 function Tables() {
    const history = useHistory()
-
-   function handleEdit() {
-      history.push('/edition')
-   }
 
 
    return (
@@ -46,7 +41,7 @@ function Tables() {
          </TablesContainer>
          <PlusContainer>
             <PlusButtonContainer>
-               <Button onClick={handleEdit} width={35} bordrad={99}>
+               <Button onClick={() => history.push('/edition')} width={35} bordrad={99}>
                   <FontAwesomeIcon icon={faPlus}/>
                </Button>
             </PlusButtonContainer>

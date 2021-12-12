@@ -11,10 +11,6 @@ function NaviBar() {
    const { logOut } = useAuth()
    const history = useHistory()
 
-   function handleTables() {
-      history.push('/')
-   }
-   
 
    return (
       <NaviBarContainer>
@@ -23,7 +19,7 @@ function NaviBar() {
             {isEdition &&
                <Button
                text=' VOLTAR'
-               onClick={handleTables} 
+               onClick={() => history.push('/')} 
                width={100}
                height={30}
                >
