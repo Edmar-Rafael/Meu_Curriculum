@@ -3,25 +3,28 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useHistory, useLocation } from "react-router";
 import { Button } from "..";
 import { useAuth } from "../../hooks/useAuth";
-import Logo from "../../icons/Logo";
+import { Logo } from "..";
 import { ButtonContainer, Content, LogoContainer, NaviBarContainer } from "./styles";
+
+type LogOutType = {
+   logOut?: () => void
+}
+
 
 function NaviBar() {
    const isEdition = useLocation().pathname === '/edition'
-   const { logOut } = useAuth()
+   const { logOut }: LogOutType = useAuth()
    const history = useHistory()
-
 
    return (
       <NaviBarContainer>
          <Content>
             <ButtonContainer>
-            {isEdition &&
+            { isEdition &&
                <Button
-               text=' VOLTAR'
-               onClick={() => history.push('/')} 
-               width={100}
-               height={30}
+                  onClick={() => history.push('/')} 
+                  text=' VOLTAR'
+                  x={100}
                >
                   <FontAwesomeIcon icon={faArrowLeft}/>
                </Button> 
@@ -32,10 +35,9 @@ function NaviBar() {
             </LogoContainer>
             <ButtonContainer>
                <Button 
-                  text='SAIR'
                   onClick={logOut}
-                  width={100}
-                  height={30}
+                  text='SAIR'
+                  x={100}
                />
             </ButtonContainer>
          </Content>

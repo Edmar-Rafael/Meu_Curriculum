@@ -3,8 +3,6 @@ import { Colors } from '../../resources'
 
 
 export const FormContainer = styled.form`
-   display: flex;
-   flex-wrap: wrap;
    width: 58%;
    padding: 30px 25px 0 25px;
    background-color: ${Colors.background.secondary};
@@ -59,10 +57,6 @@ export const TextArea = styled.textarea`
       font-weight: 700;
       color: ${Colors.purple.primary};
       transform: translate3d(-6px, -148px, 0) scale(.84);
-   }
-
-   &::placeholder {
-      color: transparent;
    }
 `
 

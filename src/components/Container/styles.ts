@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
-export const BodyContainer = styled.div`
+type FlexType = {
+   flexDir?: string
+}
+
+export const ContainerBody = styled.div<FlexType>`
    width: 100%;
    min-height: 100vh;
    display: flex;

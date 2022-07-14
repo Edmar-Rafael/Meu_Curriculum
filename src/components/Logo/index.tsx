@@ -1,6 +1,14 @@
 import * as React from "react"
 
-function Logo({x, y, pathx, pathy, ...props}) {
+type LogoProps = {
+  x?: number;
+  y?: number;
+  pathx?: number;
+  pathy?: number
+}
+
+
+function Logo({x, y, pathx, pathy, ...props}: LogoProps) {
   return (
     <svg
       id='svg'

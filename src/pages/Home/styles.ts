@@ -30,6 +30,7 @@ export const HomeFormContainer = styled.form`
    justify-content: center;
    width: 44%;
    height: 330px;
+   padding: 0 4px 0 4px;
    background-color: ${Colors.background.secondary};
    border-radius: 4px;
 

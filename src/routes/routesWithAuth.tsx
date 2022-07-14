@@ -9,7 +9,7 @@ function RoutesWithAuth() {
          <NaviBar/>
          <Switch>
             <Route path={'/'} component={Tables} exact/>
-            <Route path={'/edition'} component={Edition} exact/>
+            <Route path={'/edition'} component={Edition} />
          </Switch>
       </>
    )

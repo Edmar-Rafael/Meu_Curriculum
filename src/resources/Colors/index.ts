@@ -4,6 +4,11 @@ const Colors = {
       secondary: '#121212',
    },
 
+   font: {
+      white: '#fff',
+      black: '#000'
+   },
+
    purple: {
       primary: '#bb86fc',
       secondary: '#805fa9'

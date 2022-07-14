@@ -1,9 +1,8 @@
 import React from 'react'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import pdfIcon from '../../assets/images/pdfIcon.svg'
 import { useHistory } from 'react-router'
-import { Button, Container, Separator, ToRegister } from '../../components'
+import { Button, Container, Icons, Separator, ToRegister } from '../../components'
 import { EMAIL } from '../../config'
 import { 
    ButtonContainer, 
@@ -15,21 +14,22 @@ import {
    PlusContainer, 
    TablesContainer, 
    TablesHeader, 
-   UserNameContainer } from './styles'
+   UserNameContainer 
+} from './styles'
+
    
 function Tables() {
    const history = useHistory()
 
-
-   return (
-      <Container flexDir={'column'}>
+   return ( 
+      <Container flexDir='column'>
          <TablesContainer>
             <TablesHeader>
                <NameContainer>NAME</NameContainer>
                <OptionsContainer>OPÇÔES</OptionsContainer>
                <UserNameContainer>{EMAIL}</UserNameContainer>
                <ButtonContainer>
-                  <Button  text='EDITAR' width={90} />
+                  <Button  text={'EDITAR'} x={90} />
                   <Separator/>
                   <Button pdf>
                      <Img src={pdfIcon} />
@@ -41,8 +41,12 @@ function Tables() {
          </TablesContainer>
          <PlusContainer>
             <PlusButtonContainer>
-               <Button onClick={() => history.push('/edition')} width={35} bordrad={99}>
-                  <FontAwesomeIcon icon={faPlus}/>
+               <Button 
+                  onClick={() => history.push('/edition')} 
+                  x={35} 
+                  bordrad={99}
+               >
+                  <Icons faIcon={faPlus} fa_plus/>
                </Button>
             </PlusButtonContainer>
          </PlusContainer>

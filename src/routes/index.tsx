@@ -3,6 +3,7 @@ import { useAuth } from '../hooks/useAuth'
 import RoutesWithAuth from './routesWithAuth'
 import RoutesWithoutAuth from './routesWithoutAuth'
 
+
 function Routes(){
    const {isAuthenticated} = useAuth()
 

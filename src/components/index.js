@@ -1,8 +1,0 @@
-export { default as Button } from './Button'
-export { default as Separator } from './Separator'
-export { default as Input } from './Input' 
-export { default as ToRegister } from './ToRegister'
-export { default as Container } from './Container'
-export { default as NaviBar } from './NaviBar'
-export { default as FloatingLabel } from './FloatingLabel'
-export { default as InputLabelContainer} from './InputLabelContainer'
