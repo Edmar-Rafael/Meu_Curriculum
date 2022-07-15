@@ -37,7 +37,7 @@ function Tables() {
                </ButtonContainer>
             </TablesHeader>
             <MaterialTable />
-            <ToRegister/>
+            <Button text={'Registrar-se'} to_register/>
          </TablesContainer>
          <PlusContainer>
             <PlusButtonContainer>

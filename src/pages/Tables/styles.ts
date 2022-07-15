@@ -10,7 +10,7 @@ export const TablesContainer = styled.div`
    padding: 35px 55px;
    background-color: ${Colors.background.secondary};
 
-   @media(max-width: 700px) {
+   @media(max-width: 800px) {
       margin-top: 50px;
       height: 300px;
       width: 75%;
@@ -77,7 +77,7 @@ export const Img = styled.img`
 
 export const MaterialTable = styled.div`
    width: 100%;
-   height: 314px;
+   height: 190px;
 `
 
 export const PlusContainer = styled.div`

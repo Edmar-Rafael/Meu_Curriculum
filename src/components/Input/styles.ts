@@ -63,7 +63,7 @@ export const InputContainer = styled.input`
 
 export const Label = styled.label`
    padding: 0 5px 0 0;
-   font-size: 18px;
+   font-size: 1.05rem;
    color: ${Colors.label};
    font-weight: 100;
    font-family: 'Noto-sans';
